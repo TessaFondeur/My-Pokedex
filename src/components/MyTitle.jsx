@@ -1,7 +1,14 @@
+const container = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+};
+
 function MyTitle() {
 
-    return <h1>Hello React</h1>;
-
+    return <section style={container}><h1 style={{ color: 'green', fontWeight: 900 }}>Mon Pokédex</h1>;
+    </section>
 }
 
 
