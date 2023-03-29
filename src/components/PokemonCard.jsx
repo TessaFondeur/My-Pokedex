@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const card = {
     width: "500px",
     padding: "1rem",
@@ -10,18 +12,6 @@ const card = {
     textShadow: "0px 0px 5px gray",
 };
 
-// const pokemonList = [
-
-//     {
-//         name: "bulbasaur",
-//         imgSrc:
-//             "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-//     },
-//     {
-//         name: "mew",
-//     },
-// ];
-
 function PokemonCard(props) {
     console.log(props);
     return (<figure style={card}> {
@@ -29,12 +19,16 @@ function PokemonCard(props) {
             <img src={props.imgSrc} alt={props.name} />
         ) : (<p>???</p>)
     }
-
-
-
         <figcaption>{props.name}</figcaption>
     </figure>
     );
+}
+
+PokemonCard.propTypes = {
+    pokemon: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        imgSrc: PropTypes.string,
+    }).isRequired,
 }
 
 export default PokemonCard;
