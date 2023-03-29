@@ -7,7 +7,7 @@ const container = {
 
 function MyTitle() {
 
-    return <section style={container}><h1 style={{ color: 'green', fontWeight: 900 }}>Mon Pokédex</h1>;
+    return <section style={container}><h1 style={{ color: 'green', fontWeight: 900 }}>Mon Pokédex</h1>
     </section>
 }
 
